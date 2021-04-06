@@ -1,8 +1,6 @@
 // Api mapbox
 mapboxgl.accessToken = 'pk.eyJ1IjoiZWxsZW5jaGFybG90dGVkYiIsImEiOiJja21ramtoaHMweGJsMm9ta3o0ODd2dmxwIn0.CUzbU0eU7C6FuZWahtnycw';
 
-hotelsAdviser = '65a60e4f39msh73836606ee1cd85p148527jsn948fd7880e42';
-
 // api  openWeatherMap
 var openWeatherMapUrl = 'https://api.openweathermap.org/data/2.5/weather';
 var openWeatherMapUrlApiKey = '24aef0c308c22b445e332d934b35e1c0';
@@ -56,12 +54,13 @@ map.addControl(
 new MapboxDirections({
 accessToken: mapboxgl.accessToken
 }),
-'top-left'
+// 'top-left'
 );
 
 // Hiermee kan je in en uit zoomen.
 map.addControl(new mapboxgl.NavigationControl());
 
+//dit is de landingsplaats
 var marker1 = new mapboxgl.Marker({ color: 'purple' })
 .setLngLat([4.332503, 52.073443])
 .addTo(map);
@@ -139,7 +138,7 @@ map.on('load', function () {
     }
   });
 
-  // Add a layer showing the places.
+  // Laag dat plaatsen laat zien.
   map.addLayer({
     'id': 'places',
     'type': 'symbol',
@@ -151,7 +150,7 @@ map.on('load', function () {
   });
 
 
-  // Create a popup, but don't add it to the map yet.
+  // Dit zijn de iconen met informatie.
   var popup = new mapboxgl.Popup({
     closeButton: false,
     closeOnClick: false
@@ -161,7 +160,6 @@ map.on('load', function () {
     var coordinates = e.features[0].geometry.coordinates.slice();
     var description = e.features[0].properties.description;
 
-    // Populate the popup and set its coordinates based on the feature found.
     popup.setLngLat(coordinates)
          .setHTML(description)
          .addTo(map);

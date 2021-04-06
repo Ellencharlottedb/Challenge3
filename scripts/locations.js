@@ -53,7 +53,7 @@ myLocationsList = [{
       'coordinates': [4.3089048, 52.0751773]
     }
   },
-  myLocationsList = [{
+ {
     'type': 'Feature',
     'properties': {
       'description': '<strong>Paard</strong><p> Het Paard, voorheen Paard van Troje, is een uitgaansgelegenheid in Den Haag die sinds 1972 bestaat. Het biedt in de grote zaal plaats aan 1100 bezoekers en in de kleine zaal plaats aan 300 bezoekers. Daarnaast is er nog een café met plaats voor ca. 200 personen. </p>',
