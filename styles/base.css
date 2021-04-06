@@ -1,0 +1,13 @@
+body {
+  margin: 5vh 5vw;
+
+  background: #9b9fb2; /* Old browsers */
+  background: -moz-linear-gradient(top, #9b9fb2 0%, #061028 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #9b9fb2 0%,#061028 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #9b9fb2 0%,#061028 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+#map {
+  height: 90vh;
+  width: 90vw;
+}
+
